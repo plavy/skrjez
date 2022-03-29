@@ -12,3 +12,4 @@ for i in $(seq 1 15); do echo $i; done
 
 kraj=2
 for i in $(seq 1 $kraj); do echo $i; done
+for i in {1..$kraj}; do echo $i; done

@@ -3,7 +3,7 @@
 proba="Ovo je proba"
 echo $proba
 
-lista_datoteka=$(ls *)
+lista_datoteka=$(echo *)
 echo lista_datoteka = $lista_datoteka
 
 proba3="$proba. $proba. $proba. "
