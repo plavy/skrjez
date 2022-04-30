@@ -4,4 +4,4 @@
 
 foreach (@brojevi) {$sum += $_;}
 
-print "Aritemtička sredina: ", $sum / @brojevi, "\n";
+print "Aritmetička sredina: ", $sum / @brojevi, "\n";
