@@ -1,5 +1,8 @@
 #!/usr/bin/perl -w
 
+use open ':locale';
+use locale;
+
 $udjeli_ucitani = 0;
 
 while(<>) {
@@ -29,8 +32,8 @@ $i = 0;
 print "\n", "Lista po rangu:", "\n";
 print "-------------------", "\n";
 foreach (@lista) {
+  $i++;
   $podaci = "$$_[1], $$_[2] ($$_[0])";
   $br_bod = $$_[3];
-  printf "%3d. %-35s : %.2f\n", $i, $podaci, $br_bod;
-  $i++;
+  printf "%3d. %-33s : %.2f\n", $i, $podaci, $br_bod;
 }
