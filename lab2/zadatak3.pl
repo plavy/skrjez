@@ -11,7 +11,10 @@ foreach (@sati24) {
 }
 
 sub print_and_reset {
-  if (@sati) {
+  if ($datum) {
+    print "\n"," Datum: ", $datum, "\n";
+    print " sat : broj pristupa", "\n";
+    print "-------------------------------", "\n";
     foreach $sat (@sati24) {
     $n = grep /$sat/, @sati;
     print "  $sat : $n\n";
@@ -25,9 +28,6 @@ while (<>) {
     &print_and_reset();
     $datum = $datoteka = $ARGV;
     $datum =~ s/.*([0-9]{4}-[0-9]{2}-[0-9]{2}).*/$1/g;
-    print "\n"," Datum: ", $datum, "\n";
-    print " sat : broj pristupa", "\n";
-    print "-------------------------------", "\n";
   }
   if (/[0-9]{4}:([0-9]{2}):[0-9]{2}:[0-9]{2}/) {
     push @sati, $1;
