@@ -29,7 +29,7 @@ if __name__ == "__main__":
                 jmbag = line.strip().split()[0]
                 bod = float(line.strip().split()[1])
                 if jmbag in d and lab_broj in d[jmbag]:
-                    print(f'WARNING: Student {jmbag} has conflicts for lab{lab_broj}')
+                    print(f'WARNING: Student {jmbag} has conflicts for {lab_broj}')
                 d[jmbag][lab_broj] = bod
     print(f'{"JMBAG":14s} {"Prezime, Ime":26s}', end='')
     for el in sorted(lab_brojevi):
